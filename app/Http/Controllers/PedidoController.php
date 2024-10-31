@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pedido;
-use App\Models\Produto; // Caso você precise de produtos para associar ao pedido
+use App\Models\Produto; 
 use Illuminate\Http\Request;
 
 class PedidoController extends Controller
 {
     public function create()
     {
-        $produtos = Produto::all(); // Carregar todos os produtos
+        $produtos = Produto::all(); 
         return view('pedidos.create', compact('produtos'));
     }
 
@@ -18,7 +18,7 @@ class PedidoController extends Controller
     {
         $request->validate([
             'cliente' => 'required|string|max:255',
-            'produto_id' => 'required|exists:produtos,id', // Verifica se o produto existe
+            'produto_id' => 'required|exists:produtos,id', 
             'quantidade' => 'required|integer|min:1',
             'data' => 'required|date',
         ]);
@@ -42,7 +42,7 @@ class PedidoController extends Controller
     public function edit($id)
     {
         $pedido = Pedido::findOrFail($id);
-        $produtos = Produto::all(); // Carregar todos os produtos para edição
+        $produtos = Produto::all(); 
         return view('pedidos.edit', compact('pedido', 'produtos'));
     }
 

@@ -7,13 +7,13 @@
 </head>
 <body>
     
-        <label  for=""> Nome Produto</label>
+        <label  for=""> Nome</label>
         <input type="text" name="nome" value="{{$produto->nome}}"><br/>
-        <label  for=""> Custo Produto</label>
+        <label  for=""> Custo</label>
         <input type="text" name="custo"value="{{$produto->custo}}"><br/>
-        <label  for=""> Preço Produto</label>
+        <label  for=""> Preço</label>
         <input type="text" name="preço"value="{{$produto->preco}}"><br/>
-        <label  for=""> Quantidade Produto</label>
+        <label  for=""> Quantidade do Produto</label>
         <input type="text" name="quantidade"value="{{$produto->quantidade}}"><br/>
         <button>Salvar</button>
 

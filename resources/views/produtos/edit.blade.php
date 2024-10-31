@@ -11,19 +11,19 @@
     <form action="{{ route('alterar_produto', ['id' => $produto->id]) }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="nome" class="form-label">Nome Produto</label>
+            <label for="nome" class="form-label">Nome</label>
             <input type="text" name="nome" class="form-control" id="nome" value="{{ $produto->nome }}">
         </div>
         <div class="mb-3">
-            <label for="custo" class="form-label">Custo Produto</label>
+            <label for="custo" class="form-label">Custo</label>
             <input type="text" name="custo" class="form-control" id="custo" value="{{ $produto->custo }}">
         </div>
         <div class="mb-3">
-            <label for="preco" class="form-label">Preço Produto</label>
+            <label for="preco" class="form-label">Preço</label>
             <input type="text" name="preco" class="form-control" id="preco" value="{{ $produto->preco }}">
         </div>
         <div class="mb-3">
-            <label for="quantidade" class="form-label">Quantidade Produto</label>
+            <label for="quantidade" class="form-label">Quantidade do Produto</label>
             <input type="text" name="quantidade" class="form-control" id="quantidade" value="{{ $produto->quantidade }}">
         </div>
         <button type="submit" class="btn btn-primary">Salvar</button>
